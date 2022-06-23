@@ -1,0 +1,16 @@
+#soccerPitch-Container{
+    height: calc(100vh - 90px);
+    min-height: 540px;
+    position: relative;
+}
+
+#soccerPitch{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 450px;
+    background: url('../../assets/SoccerPitch.png') no-repeat center;
+    background-size: contain;
+}

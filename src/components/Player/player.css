@@ -1,0 +1,75 @@
+.player{
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+#name{
+    padding: 0px 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-size: .7em;
+    font-weight: bold;
+}
+
+#gol{
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#zagD{
+    bottom: 150px;
+    right: 130px;
+}
+
+#zagE{
+    bottom: 150px;
+    left: 130px;
+}
+
+#latD{
+    bottom: 180px;
+    right: 30px;
+}
+
+#latE{
+    bottom: 180px;
+    left: 30px;
+}
+
+#mcD{
+    bottom: 280px;
+    right: 80px;
+}
+
+#mcE{
+    bottom: 280px;
+    left: 80px;
+}
+
+#mcM{
+    bottom: 300px;
+    right: 50%;
+    transform: translate(50%);
+}
+
+#pD{
+    bottom: 400px;
+    right: 50px;
+}
+
+#pE{
+    bottom: 400px;
+    left: 50px;
+}
+
+#ata{
+    bottom: 420px;
+    right: 50%;
+    transform: translate(50%);
+}
