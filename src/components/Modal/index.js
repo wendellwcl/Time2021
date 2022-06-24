@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { PlayersContext } from "../../context/PlayersContext"
 
 //Components
-import { Hexagon } from "../styled-components";
+import PlayerModal from "../PlayerModal";
 
 
 const Modal = () => {
@@ -28,168 +28,47 @@ const Modal = () => {
                             <div className="row">
                         
                                 {currentPosition === 'goleiro' && goleiros.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setGoleiro(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setGoleiro(item)} />
                                 ))}
 
                                 {currentPosition === 'zagueiro direita' && zagueiros.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setZagueiroDireita(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setZagueiroDireita(item)} />
                                 ))}
 
                                 {currentPosition === 'zagueiro esquerda' && zagueiros.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setZagueiroEsquerda(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setZagueiroEsquerda(item)} />
                                 ))}
 
                                 {currentPosition === 'lateral direita' && laterais.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setLateralDireita(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setLateralDireita(item)} />
                                 ))}
 
                                 {currentPosition === 'lateral esquerda' && laterais.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setLateralEsquerda(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setLateralEsquerda(item)} />
                                 ))}
 
                                 {currentPosition === 'meia direita' && meias.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setMeiaDireita(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setMeiaDireita(item)} />
                                 ))}
 
                                 {currentPosition === 'meia esquerda' && meias.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setMeiaEsquerda(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setMeiaEsquerda(item)} />
                                 ))}
 
                                 {currentPosition === 'meia central' && meias.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setMeiaCentral(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setMeiaCentral(item)} />
                                 ))}
 
                                 {currentPosition === 'ponta direita' && pontas.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setPontaDireita(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setPontaDireita(item)} />
                                 ))}
 
                                 {currentPosition === 'ponta esquerda' && pontas.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setPontaEsquerda(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setPontaEsquerda(item)} />
                                 ))}
 
                                 {currentPosition === 'atacante' && atacantes.map(item => (
-                                    <div key={item.name} className="col-4 col-md-2 d-flex flex-column align-items-center">
-                                        <Hexagon size={75}>
-                                            <button onClick={() => setAtacante(item)} 
-                                                    data-bs-dismiss="modal" 
-                                                    aria-label={`selecionar ${item.name}`}>
-                                            </button>
-                                            <div id="bg">
-                                                <img src={item.img} alt={item.name} />
-                                            </div>
-                                        </Hexagon>
-                                        <nobr className="name">{item.name}</nobr>
-                                    </div>
+                                    <PlayerModal name={item.name} img={item.img} action={() => setAtacante(item)} />
                                 ))}
 
                             </div>
