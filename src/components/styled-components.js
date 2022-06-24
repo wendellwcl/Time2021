@@ -8,6 +8,16 @@ export const Hexagon = styled.div`
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     cursor: pointer;
 
+    button{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border: none;
+        background-color: transparent;
+    }
+
     div#bg{
         position: absolute;
         inset: 5px;
