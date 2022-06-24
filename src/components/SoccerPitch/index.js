@@ -13,7 +13,7 @@ import Player from "../Player"
 
 const SoccerPitch = () => {
 
-    const { goleiro, zagueiroDireita, zagueiroEsquerda, lateralDireita, lateralEsquerda, 
+    const { goleiro, zagueiroDireito, zagueiroEsquerdo, lateralDireito, lateralEsquerdo, 
             meiaDireita, meiaEsquerda, meiaCentral, 
             pontaDireita, pontaEsquerda, atacante } = useContext(PlayersContext);
 
@@ -21,10 +21,10 @@ const SoccerPitch = () => {
         <div className="col-12 col-lg-6" id="soccerPitch-Container">
             <div id="soccerPitch">
                 <Player img={goleiro.img} name={goleiro.name} position="goleiro"/>
-                <Player img={zagueiroDireita.img} name={zagueiroDireita.name} position="zagueiro_direita"/>
-                <Player img={zagueiroEsquerda.img} name={zagueiroEsquerda.name} position="zagueiro_esquerda"/>
-                <Player img={lateralDireita.img} name={lateralDireita.name} position="lateral_direita"/>
-                <Player img={lateralEsquerda.img} name={lateralEsquerda.name} position="lateral_esquerda"/>
+                <Player img={zagueiroDireito.img} name={zagueiroDireito.name} position="zagueiro_direito"/>
+                <Player img={zagueiroEsquerdo.img} name={zagueiroEsquerdo.name} position="zagueiro_esquerdo"/>
+                <Player img={lateralDireito.img} name={lateralDireito.name} position="lateral_direito"/>
+                <Player img={lateralEsquerdo.img} name={lateralEsquerdo.name} position="lateral_esquerdo"/>
                 <Player img={meiaDireita.img} name={meiaDireita.name} position="meia_direita"/>
                 <Player img={meiaEsquerda.img} name={meiaEsquerda.name} position="meia_esquerda"/>
                 <Player img={meiaCentral.img} name={meiaCentral.name} position="meia_central"/>

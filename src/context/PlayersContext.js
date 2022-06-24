@@ -117,10 +117,10 @@ export const PlayersContextProvider = ({ children }) => {
 
     //Posições
     const [goleiro, setGoleiro] = useState(PlayerNull);
-    const [zagueiroDireita, setZagueiroDireita] = useState(PlayerNull);
-    const [zagueiroEsquerda, setZagueiroEsquerda] = useState(PlayerNull);
-    const [lateralDireita, setLateralDireita] = useState(PlayerNull);
-    const [lateralEsquerda, setLateralEsquerda] = useState(PlayerNull);
+    const [zagueiroDireito, setZagueiroDireito] = useState(PlayerNull);
+    const [zagueiroEsquerdo, setZagueiroEsquerdo] = useState(PlayerNull);
+    const [lateralDireito, setLateralDireito] = useState(PlayerNull);
+    const [lateralEsquerdo, setLateralEsquerdo] = useState(PlayerNull);
     const [meiaDireita, setMeiaDireita] = useState(PlayerNull);
     const [meiaEsquerda, setMeiaEsquerda] = useState(PlayerNull);
     const [meiaCentral, setMeiaCentral] = useState(PlayerNull);
@@ -133,10 +133,10 @@ export const PlayersContextProvider = ({ children }) => {
             currentPosition, setCurrentPosition,
             goleiros, zagueiros, laterais, meias, pontas, atacantes,
             goleiro, setGoleiro,
-            zagueiroDireita, setZagueiroDireita,
-            zagueiroEsquerda, setZagueiroEsquerda,
-            lateralDireita, setLateralDireita,
-            lateralEsquerda, setLateralEsquerda,
+            zagueiroDireito, setZagueiroDireito,
+            zagueiroEsquerdo, setZagueiroEsquerdo,
+            lateralDireito, setLateralDireito,
+            lateralEsquerdo, setLateralEsquerdo,
             meiaDireita, setMeiaDireita,
             meiaEsquerda, setMeiaEsquerda,
             meiaCentral, setMeiaCentral,

@@ -22,22 +22,22 @@
     transform: translate(-50%);
 }
 
-#zagueiro_direita{
+#zagueiro_direito{
     bottom: 150px;
     right: 130px;
 }
 
-#zagueiro_esquerda{
+#zagueiro_esquerdo{
     bottom: 150px;
     left: 130px;
 }
 
-#lateral_direita{
+#lateral_direito{
     bottom: 180px;
     right: 30px;
 }
 
-#lateral_esquerda{
+#lateral_esquerdo{
     bottom: 180px;
     left: 30px;
 }

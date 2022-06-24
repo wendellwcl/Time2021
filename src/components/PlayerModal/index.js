@@ -5,7 +5,7 @@ import { Hexagon } from "../styled-components"
 const PlayerModal = ({ name, img, action }) => {
 
     return(
-        <div className="col-4 col-md-2 d-flex flex-column align-items-center">
+        <div className="col-4 col-lg-2 d-flex flex-column align-items-center playerModal">
             <Hexagon size={75}>
                 <button onClick={action} 
                         data-bs-dismiss="modal" 
@@ -15,7 +15,7 @@ const PlayerModal = ({ name, img, action }) => {
                     <img src={img} alt={name} />
                 </div>
             </Hexagon>
-            <nobr className="name">{name}</nobr>
+            <nobr className="name mt-0">{name}</nobr>
         </div>
     )
 
