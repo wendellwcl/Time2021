@@ -20,17 +20,17 @@ const SoccerPitch = () => {
     return(
         <div className="col-12 col-lg-6" id="soccerPitch-Container">
             <div id="soccerPitch">
-                <Player img={goleiro} name="nome" position="goleiro"/>
-                <Player img={zagueiroDireita} name="nome" position="zagueiro_direita"/>
-                <Player img={zagueiroEsquerda} name="nome" position="zagueiro_esquerda"/>
-                <Player img={lateralDireita} name="nome" position="lateral_direita"/>
-                <Player img={lateralEsquerda} name="nome" position="lateral_esquerda"/>
-                <Player img={meiaDireita} name="nome" position="meia_direita"/>
-                <Player img={meiaEsquerda} name="nome" position="meia_esquerda"/>
-                <Player img={meiaCentral} name="nome" position="meia_central"/>
-                <Player img={pontaDireita} name="nome" position="ponta_direita"/>
-                <Player img={pontaEsquerda} name="nome" position="ponta_esquerda"/>
-                <Player img={atacante} name="nome" position="atacante"/>
+                <Player img={goleiro.img} name={goleiro.name} position="goleiro"/>
+                <Player img={zagueiroDireita.img} name={zagueiroDireita.name} position="zagueiro_direita"/>
+                <Player img={zagueiroEsquerda.img} name={zagueiroEsquerda.name} position="zagueiro_esquerda"/>
+                <Player img={lateralDireita.img} name={lateralDireita.name} position="lateral_direita"/>
+                <Player img={lateralEsquerda.img} name={lateralEsquerda.name} position="lateral_esquerda"/>
+                <Player img={meiaDireita.img} name={meiaDireita.name} position="meia_direita"/>
+                <Player img={meiaEsquerda.img} name={meiaEsquerda.name} position="meia_esquerda"/>
+                <Player img={meiaCentral.img} name={meiaCentral.name} position="meia_central"/>
+                <Player img={pontaDireita.img} name={pontaDireita.name} position="ponta_direita"/>
+                <Player img={pontaEsquerda.img} name={pontaEsquerda.name} position="ponta_esquerda"/>
+                <Player img={atacante.img} name={atacante.name} position="atacante"/>
             </div>
         </div>
     )
