@@ -16,59 +16,59 @@
     font-weight: bold;
 }
 
-#gol{
+#goleiro{
     bottom: 50px;
     left: 50%;
     transform: translate(-50%);
 }
 
-#zagD{
+#zagueiro_direita{
     bottom: 150px;
     right: 130px;
 }
 
-#zagE{
+#zagueiro_esquerda{
     bottom: 150px;
     left: 130px;
 }
 
-#latD{
+#lateral_direita{
     bottom: 180px;
     right: 30px;
 }
 
-#latE{
+#lateral_esquerda{
     bottom: 180px;
     left: 30px;
 }
 
-#mcD{
+#meia_direita{
     bottom: 280px;
     right: 80px;
 }
 
-#mcE{
+#meia_esquerda{
     bottom: 280px;
     left: 80px;
 }
 
-#mcM{
+#meia_central{
     bottom: 300px;
     right: 50%;
     transform: translate(50%);
 }
 
-#pD{
+#ponta_direita{
     bottom: 400px;
     right: 50px;
 }
 
-#pE{
+#ponta_esquerda{
     bottom: 400px;
     left: 50px;
 }
 
-#ata{
+#atacante{
     bottom: 420px;
     right: 50%;
     transform: translate(50%);

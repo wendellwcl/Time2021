@@ -6,6 +6,7 @@ export const Hexagon = styled.div`
     width: ${props => `${props.size}px`};
     height: ${props => `${props.size}px`};
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    cursor: pointer;
 
     div#bg{
         position: absolute;
