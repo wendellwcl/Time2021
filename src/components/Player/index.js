@@ -7,11 +7,10 @@ import "./player.css";
 //Components
 import { Hexagon } from "../styled-components"
 
-
-
 import { useContext } from "react";
 
-const Player = ({ img, name, position }) => {
+
+const Player = ({ img, name, flag, action, position }) => {
 
     const positionData = position.replace("_", " ")
 
@@ -29,7 +28,9 @@ const Player = ({ img, name, position }) => {
                     <img src={img} alt={name} />
                 </div>
             </Hexagon>
-            <nobr className="name">{name}</nobr>
+            {flag && <img src={flag} alt="bandeira" className="flag" /> }   
+            {name && <nobr className="name">{name}</nobr>}
+            {name && <button className="resetButton" onClick={action}>X</button>}
         </div>
     )
 

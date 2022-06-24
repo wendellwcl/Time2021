@@ -66,7 +66,7 @@ export const PlayersContext = createContext();
 export const PlayersContextProvider = ({ children }) => {
 
     //DataBase Jogadores
-    const PlayerNull = {img: DefaultImg};
+    const playerNull = {img: DefaultImg};
     const alaba = {name: 'Alaba', img: AlabaImg, flag: Austria};
     const alexanderArnold = {name: 'Alexander-Arnold', img: AlexanderArnoldImg, flag: Inglaterra};
     const alisson = {name: 'Alisson', img: AlissonImg, flag: Brasil};
@@ -116,22 +116,22 @@ export const PlayersContextProvider = ({ children }) => {
     const [currentPosition, setCurrentPosition] = useState(null);
 
     //Posições
-    const [goleiro, setGoleiro] = useState(PlayerNull);
-    const [zagueiroDireito, setZagueiroDireito] = useState(PlayerNull);
-    const [zagueiroEsquerdo, setZagueiroEsquerdo] = useState(PlayerNull);
-    const [lateralDireito, setLateralDireito] = useState(PlayerNull);
-    const [lateralEsquerdo, setLateralEsquerdo] = useState(PlayerNull);
-    const [meiaDireita, setMeiaDireita] = useState(PlayerNull);
-    const [meiaEsquerda, setMeiaEsquerda] = useState(PlayerNull);
-    const [meiaCentral, setMeiaCentral] = useState(PlayerNull);
-    const [pontaDireita, setPontaDireita] = useState(PlayerNull);
-    const [pontaEsquerda, setPontaEsquerda] = useState(PlayerNull);
-    const [atacante, setAtacante] = useState(PlayerNull);
+    const [goleiro, setGoleiro] = useState(playerNull);
+    const [zagueiroDireito, setZagueiroDireito] = useState(playerNull);
+    const [zagueiroEsquerdo, setZagueiroEsquerdo] = useState(playerNull);
+    const [lateralDireito, setLateralDireito] = useState(playerNull);
+    const [lateralEsquerdo, setLateralEsquerdo] = useState(playerNull);
+    const [meiaDireita, setMeiaDireita] = useState(playerNull);
+    const [meiaEsquerda, setMeiaEsquerda] = useState(playerNull);
+    const [meiaCentral, setMeiaCentral] = useState(playerNull);
+    const [pontaDireita, setPontaDireita] = useState(playerNull);
+    const [pontaEsquerda, setPontaEsquerda] = useState(playerNull);
+    const [atacante, setAtacante] = useState(playerNull);
 
     return(
         <PlayersContext.Provider value={{
-            currentPosition, setCurrentPosition,
-            goleiros, zagueiros, laterais, meias, pontas, atacantes,
+            currentPosition, setCurrentPosition, 
+            playerNull, goleiros, zagueiros, laterais, meias, pontas, atacantes,
             goleiro, setGoleiro,
             zagueiroDireito, setZagueiroDireito,
             zagueiroEsquerdo, setZagueiroEsquerdo,
