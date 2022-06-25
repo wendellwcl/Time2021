@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Time2021/static/css/main.56cd9575.css",
-    "main.js": "/Time2021/static/js/main.cd67e0ab.js",
+    "main.js": "/Time2021/static/js/main.ee63f9bf.js",
     "static/media/SoccerPitch.png": "/Time2021/static/media/SoccerPitch.fba541d9c2cbacfc2a1d.png",
     "static/media/Salah.png": "/Time2021/static/media/Salah.b777f1ce872b1af75dcf.png",
     "static/media/AlexanderArnold.png": "/Time2021/static/media/AlexanderArnold.7f30bd2acc5e0fca4074.png",
@@ -41,10 +41,10 @@
     "static/media/Mendy.png": "/Time2021/static/media/Mendy.67fc9acddd968a3c0ccf.png",
     "index.html": "/Time2021/index.html",
     "main.56cd9575.css.map": "/Time2021/static/css/main.56cd9575.css.map",
-    "main.cd67e0ab.js.map": "/Time2021/static/js/main.cd67e0ab.js.map"
+    "main.ee63f9bf.js.map": "/Time2021/static/js/main.ee63f9bf.js.map"
   },
   "entrypoints": [
     "static/css/main.56cd9575.css",
-    "static/js/main.cd67e0ab.js"
+    "static/js/main.ee63f9bf.js"
   ]
 }
