@@ -4,6 +4,11 @@
     margin-bottom: 30px;
 }
 
+.playerModal.disable{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 @media(min-width: 992px){
     .playerModal:nth-child(1),
     .playerModal:nth-child(2),

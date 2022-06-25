@@ -2,15 +2,17 @@
 import { Hexagon } from "../styled-components"
 
 
-const PlayerModal = ({ name, img, action }) => {
+const PlayerModal = ({ name, img, action, disable }) => {
 
     return(
-        <div className="col-4 col-lg-2 d-flex flex-column align-items-center playerModal">
+        <div className={`col-4 col-lg-2 d-flex flex-column align-items-center playerModal ${disable ? "disable" : null}`}>
             <Hexagon size={75}>
-                <button onClick={action} 
+                {!disable && 
+                    <button onClick={action} 
                         data-bs-dismiss="modal" 
                         aria-label={`selecionar ${name}`}>
-                </button>
+                    </button>
+                }
                 <div id="bg">
                     <img src={img} alt={name} />
                 </div>
