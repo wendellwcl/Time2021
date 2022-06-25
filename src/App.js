@@ -1,3 +1,5 @@
+import { HashRouter } from "react-router-dom";
+
 //Css
 import "./app.css"
 
@@ -11,10 +13,12 @@ import { PlayersContextProvider } from "./context/PlayersContext";
 function App() {
   return (
     <div className="App">
-      <PlayersContextProvider>
-        <Header/>
-        <Main/>
-      </PlayersContextProvider>
+      <HashRouter>
+        <PlayersContextProvider>
+          <Header/>
+          <Main/>
+        </PlayersContextProvider>
+      </HashRouter>
     </div>
   );
 }
