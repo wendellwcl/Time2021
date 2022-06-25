@@ -1,16 +1,72 @@
 #soccerPitch-Container{
-    height: calc(100vh - 90px);
-    min-height: 540px;
     position: relative;
+    height: 540px;
 }
 
 #soccerPitch{
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 50%;
     transform: translate(-50%);
-    width: 450px;
+    height: 540px;
+    width: 400px;
     background: url('../../assets/SoccerPitch.png') no-repeat center;
     background-size: contain;
+}
+
+#goleiro{
+    top: 75%;
+    right: 50%;
+    transform: translate(50%);
+}
+
+#zagueiro_direito{
+    top : 55%;
+    right: 28%;
+}
+
+#zagueiro_esquerdo{
+    top: 55%;
+    left: 28%;
+}
+
+#lateral_direito{
+    top: 50%;
+    right: 5%;
+}
+
+#lateral_esquerdo{
+    top: 50%;
+    left: 5%;
+}
+
+#meia_direita{
+    top: 30%;
+    right: 15%;
+}
+
+#meia_esquerda{
+    top: 30%;
+    left: 15%;
+}
+
+#meia_central{
+    top: 25%;
+    right: 50%;
+    transform: translate(50%);
+}
+
+#ponta_direita{
+    top: 8%;
+    right: 12%;
+}
+
+#ponta_esquerda{
+    top: 8%;
+    left: 12%;
+}
+
+#atacante{
+    top: 2%;
+    right: 50%;
+    transform: translate(50%);
 }

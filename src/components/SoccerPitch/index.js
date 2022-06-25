@@ -10,7 +10,6 @@ import "./soccerPitch.css"
 import Player from "../Player"
 
 
-
 const SoccerPitch = () => {
 
     const { playerNull, 
