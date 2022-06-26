@@ -18,7 +18,7 @@ const Player = ({ img, name, flag, action, position }) => {
 
     return(
         <div id={position} className="player">
-            <Hexagon size={75}>
+            <Hexagon size={70}>
                 <button type="button" onClick={(e) => setCurrentPosition(e.target.dataset.position)}
                         data-position={positionData}
                         data-bs-toggle="modal"

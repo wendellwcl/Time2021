@@ -9,6 +9,11 @@
     cursor: not-allowed;
 }
 
+.playerModal .name{
+    font-size: .8em;
+    font-weight: bolder;
+}
+
 @media(min-width: 992px){
     .playerModal:nth-child(1),
     .playerModal:nth-child(2),

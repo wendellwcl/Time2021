@@ -28,7 +28,7 @@ const Modal = () => {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <div className="container-fluid">
+                        <div className="container-fluid g-0">
                             <div className="row">
                         
                                 {currentPosition === 'goleiro' && goleiros.map(item => (

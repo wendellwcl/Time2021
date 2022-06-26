@@ -1,20 +1,20 @@
 #soccerPitch-Container{
-    position: relative;
-    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 #soccerPitch{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     height: 540px;
-    width: 400px;
+    min-width: 400px;
     background: url('../../assets/SoccerPitch.png') no-repeat center;
     background-size: contain;
+    position: relative;
 }
 
 #goleiro{
-    top: 75%;
+    top: 72%;
     right: 50%;
     transform: translate(50%);
 }
@@ -66,7 +66,7 @@
 }
 
 #atacante{
-    top: 2%;
+    top: 5%;
     right: 50%;
     transform: translate(50%);
 }
