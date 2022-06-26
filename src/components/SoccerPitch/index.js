@@ -26,7 +26,7 @@ const SoccerPitch = () => {
             atacante, setAtacante } = useContext(PlayersContext);
 
     return(
-        <div className="col-12 col-lg-6" id="soccerPitch-Container">
+        <div className="col-12 col-lg-6" id="soccerPitch-container">
             <div id="soccerPitch">
                 <Player img={goleiro.img} name={goleiro.name} flag={goleiro.flag} 
                         action={() => setGoleiro(playerNull)} position="goleiro"/>

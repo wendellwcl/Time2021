@@ -6,7 +6,7 @@ const PlayerModal = ({ name, img, action, disable }) => {
 
     return(
         <div className={`col-4 col-lg-2 d-flex flex-column align-items-center playerModal ${disable ? "disable" : null}`}>
-            <Hexagon size={75}>
+            <Hexagon size={90}>
                 {!disable && 
                     <button onClick={action} 
                         data-bs-dismiss="modal" 
