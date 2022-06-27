@@ -38,8 +38,9 @@ export const Hexagon = styled.div`
 export const PlayerLi = styled.li`
     list-style: none;
     position: relative;
-    padding: 5px;
     height: 30px;
+    width: 100%;
+    padding: 5px;
     display: flex;
     align-items: center;
     color: var(--light-color);
@@ -60,7 +61,7 @@ export const PlayerLi = styled.li`
         font-weight: lighter;
     }
 
-    button{
+    .btn100{
         position: absolute;
         inset: 0;
         width: 100%;
@@ -74,5 +75,31 @@ export const PlayerLi = styled.li`
         display: block;
         height: 70%;
         margin-right: 15px;
+    }
+
+    .list-reset-button{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 50%;
+        margin-left: 15px;
+        font-weight: bold;
+        color: var(--light-color);
+        background-color: #D0011B;
+        z-index: 2;
+        display: none;
+        cursor: pointer;
+    }
+
+    &:hover{
+        .list-reset-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 `
