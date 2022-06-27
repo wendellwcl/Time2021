@@ -1,5 +1,4 @@
-//Context
-import { PlayersContext } from "../../context/PlayersContext";
+import { useContext } from "react";
 
 //Css
 import "./player.css";
@@ -7,10 +6,11 @@ import "./player.css";
 //Components
 import { Hexagon } from "../styled-components"
 
-import { useContext } from "react";
+//Context
+import { PlayersContext } from "../../context/PlayersContext";
 
 
-const Player = ({ img, name, flag, action, position }) => {
+const Player = ({ player, reset, position }) => {
 
     const positionData = position.replace("_", " ")
 
@@ -25,12 +25,12 @@ const Player = ({ img, name, flag, action, position }) => {
                         data-bs-target="#modal">
                 </button>
                 <div id="bg">
-                    <img src={img} alt={name} />
+                    <img src={player.img} alt={player.name} />
                 </div>
             </Hexagon>
-            {flag && <img src={flag} alt="bandeira" className="flag" /> }   
-            {name && <nobr className="name">{name}</nobr>}
-            {name && <button className="resetButton" onClick={action}>X</button>}
+            {player.flag && <img src={player.flag} alt="bandeira" className="flag" /> }   
+            {player.name && <nobr className="name">{player.name}</nobr>}
+            {player.name && <button className="resetButton" onClick={reset}>X</button>}
         </div>
     )
 
