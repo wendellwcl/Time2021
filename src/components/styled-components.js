@@ -34,3 +34,45 @@ export const Hexagon = styled.div`
         }
     }
 `
+
+export const PlayerLi = styled.li`
+    list-style: none;
+    position: relative;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    font-size: .9em;
+    font-weight: bold;
+    margin-top: 10px;
+    border-bottom: 1px dotted var(--main-color);
+    transition: 0.3s;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:before{
+        content: attr(data-abbr);
+        color: var(--main-color);
+        margin-right: 15px;
+        font-weight: lighter;
+    }
+
+    button{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 1;
+        background-color: transparent;
+    }
+
+    img{
+        display: block;
+        height: 70%;
+        margin-right: 15px;
+    }
+`
