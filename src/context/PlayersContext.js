@@ -65,7 +65,7 @@ export const PlayersContext = createContext();
 
 export const PlayersContextProvider = ({ children }) => {
 
-    //DataBase Jogadores
+    //Jogadores
     const playerNull = {img: DefaultImg};
     const alaba = {name: 'Alaba', img: AlabaImg, flag: Austria};
     const alexanderArnold = {name: 'Alexander-Arnold', img: AlexanderArnoldImg, flag: Inglaterra};
@@ -104,7 +104,7 @@ export const PlayersContextProvider = ({ children }) => {
     const vinicius = {name: 'Vinícius Jr.', img: ViniciusImg, flag: Brasil};
     const vlahovic = {name: 'Vlahović', img: VlahovicImg, flag: Servia};
 
-    //Database Posições
+    //Jogadores por posições
     const goleiros = [alisson, courtois, ederson, maignan, mendy, neuer];
     const zagueiros = [alaba, marquinhos, militao, rubenDias, rudiger, vanDijk];
     const laterais = [alexanderArnold, cancelo, davies, hernandez, reeceJames, robertson];
@@ -112,7 +112,7 @@ export const PlayersContextProvider = ({ children }) => {
     const pontas = [luisDiaz, messi, rafaelLeao, salah, son, vinicius];
     const atacantes = [benzema, cristianoRonaldo, haaland, lewandowski, mbappe, vlahovic];
 
-    //String - Posição Atual
+    //controle da Posição Atual selecionada
     const [currentPosition, setCurrentPosition] = useState(null);
 
     //Posições

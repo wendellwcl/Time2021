@@ -9,13 +9,16 @@ import { PlayersContext } from "../../context/PlayersContext"
 
 const PlayerModal = ({ player, action }) => {
 
+    //recuperando dados do context
     const { zagueiroDireito, zagueiroEsquerdo,
         lateralDireito, lateralEsquerdo,
         meiaDireita, meiaEsquerda, meiaCentral,
         pontaDireita, pontaEsquerda } = useContext(PlayersContext)
         
-        const [disable, setDisable] = useState(false)
+    //disable = true quando um jogador ja foi selecionado (adiciona um className para feedback visual, impossibilita que um jogador seja selecionado duas vezes)
+    const [disable, setDisable] = useState(false)
 
+    //checa jogadores ja selecionados, caso sim, setDisable = true
     useEffect(()=>{
         function checkDuplicate(){
             if( player.name === zagueiroDireito.name ||

@@ -12,6 +12,7 @@ import PlayerModal from "../PlayerModal";
 
 const Modal = () => {
 
+    //recuperando dados do context
     const { currentPosition, 
             goleiros, zagueiros, laterais, meias, pontas, atacantes,
             setGoleiro, setZagueiroDireito, setZagueiroEsquerdo, 

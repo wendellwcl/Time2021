@@ -12,6 +12,7 @@ import Player from "../Player"
 
 const SoccerPitch = () => {
 
+    //recuperando dados do context
     const { playerNull, 
             goleiro, setGoleiro,
             zagueiroDireito, setZagueiroDireito, 

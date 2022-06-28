@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 
-.resetButton{
+.reset-button{
     position: absolute;
     top: -5px;
     right: 5px;
@@ -41,6 +41,6 @@
     display: none;
 }
 
-.player:hover .resetButton{
+.player:hover .reset-button{
     display: flex;
 }

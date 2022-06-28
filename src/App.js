@@ -1,8 +1,5 @@
 import { HashRouter } from "react-router-dom";
 
-//Css
-import "./app.css"
-
 //Components
 import Header from "./components/Header";
 import Main from "./components/Main"

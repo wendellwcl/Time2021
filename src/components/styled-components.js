@@ -1,5 +1,6 @@
 import styled from "styled-components"
 
+//Hexagono
 export const Hexagon = styled.div`
     position: relative;
     background-color: var(--main-color);
@@ -35,6 +36,7 @@ export const Hexagon = styled.div`
     }
 `
 
+//Item de lista
 export const PlayerLi = styled.li`
     list-style: none;
     position: relative;
@@ -51,7 +53,7 @@ export const PlayerLi = styled.li`
     transition: 0.3s;
 
     &:hover{
-        background-color: rgba(255, 255, 255, 0.1);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent 90%);
     }
 
     &:before{

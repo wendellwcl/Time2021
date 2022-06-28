@@ -9,6 +9,7 @@ import { PlayersContext }from '../../context/PlayersContext'
 
 const PlayersList = () => {
 
+    //recuperando dados do context
     const { setCurrentPosition , playerNull,
             goleiro, setGoleiro, 
             zagueiroDireito, setZagueiroDireito, 

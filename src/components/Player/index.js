@@ -12,8 +12,10 @@ import { PlayersContext } from "../../context/PlayersContext";
 
 const Player = ({ player, reset, position }) => {
 
+    //tratamento da informação de posição
     const positionData = position.replace("_", " ")
 
+    //recuperando dados do context
     const { setCurrentPosition } = useContext(PlayersContext);
 
     return(
@@ -30,7 +32,7 @@ const Player = ({ player, reset, position }) => {
             </Hexagon>
             {player.flag && <img src={player.flag} alt="bandeira" className="flag" /> }   
             {player.name && <nobr className="name">{player.name}</nobr>}
-            {player.name && <button className="resetButton" onClick={reset}>X</button>}
+            {player.name && <button className="reset-button" onClick={reset}>X</button>}
         </div>
     )
 
