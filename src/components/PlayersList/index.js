@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
-//Component
-import { PlayerLi } from "../styled-components";
+//Components
+import PlayerListItem from "../PlayerListItem";
 
 //Context
 import { PlayersContext }from '../../context/PlayersContext';
@@ -10,7 +10,7 @@ import { PlayersContext }from '../../context/PlayersContext';
 const PlayersList = () => {
 
     //Recuperar dados do context
-    const { setCurrentPosition , playerNull,
+    const { playerNull,
             goleiro, setGoleiro, 
             zagueiroDireito, setZagueiroDireito, 
             zagueiroEsquerdo, setZagueiroEsquerdo, 
@@ -27,137 +27,38 @@ const PlayersList = () => {
         <div className="d-none d-lg-flex flex-column justify-content-center col-6">
             <ul>
 
-                <PlayerLi data-abbr='GOL'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='goleiro'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={goleiro.flag} alt={goleiro.name} />
-                    <span>{goleiro.name}</span>
-                    {goleiro.name && <button className="list-reset-button" onClick={() => {setGoleiro(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='GOL' data_position='goleiro' 
+                                name={goleiro.name} flag={goleiro.flag} handleClick={() => setGoleiro(playerNull)} />
 
-                <PlayerLi data-abbr='ZAG'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='zagueiro direito'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={zagueiroDireito.flag} alt={zagueiroDireito.name} />
-                    <span>{zagueiroDireito.name}</span>
-                    {zagueiroDireito.name && <button className="list-reset-button" onClick={() => {setZagueiroDireito(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='ZAG' data_position='zagueiro direito' 
+                                name={zagueiroDireito.name} flag={zagueiroDireito.flag} handleClick={() => setZagueiroDireito(playerNull)} />
 
-                <PlayerLi data-abbr='ZAG'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='zagueiro esquerdo'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={zagueiroEsquerdo.flag} alt={zagueiroEsquerdo.name} />
-                    <span>{zagueiroEsquerdo.name}</span>
-                    {zagueiroEsquerdo.name && <button className="list-reset-button" onClick={() => {setZagueiroEsquerdo(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='ZAG' data_position='zagueiro esquerdo' 
+                                name={zagueiroEsquerdo.name} flag={zagueiroEsquerdo.flag} handleClick={() => setZagueiroEsquerdo(playerNull)} />
 
-                <PlayerLi data-abbr='LTD'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='lateral direito'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={lateralDireito.flag} alt={lateralDireito.name} />
-                    <span>{lateralDireito.name}</span>
-                    {lateralDireito.name && <button className="list-reset-button" onClick={() => {setLateralDireito(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='LTD' data_position='lateral direito' 
+                                name={lateralDireito.name} flag={lateralDireito.flag} handleClick={() => setLateralDireito(playerNull)} />
 
-                <PlayerLi data-abbr='LTE'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='lateral esquerdo'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={lateralEsquerdo.flag} alt={lateralEsquerdo.name} />
-                    <span>{lateralEsquerdo.name}</span>
-                    {lateralEsquerdo.name && <button className="list-reset-button" onClick={() => {setLateralEsquerdo(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='LTE' data_position='lateral esquerdo' 
+                                name={lateralEsquerdo.name} flag={lateralEsquerdo.flag} handleClick={() => setLateralEsquerdo(playerNull)} />
 
-                <PlayerLi data-abbr='MCD'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='meia direita'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={meiaDireita.flag} alt={meiaDireita.name} />
-                    <span>{meiaDireita.name}</span>
-                    {meiaDireita.name && <button className="list-reset-button" onClick={() => {setMeiaDireita(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='MCD' data_position='meia direita' 
+                                name={meiaDireita.name} flag={meiaDireita.flag} handleClick={() => setMeiaDireita(playerNull)} />
 
-                <PlayerLi data-abbr='MCE'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='meia esquerda'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={meiaEsquerda.flag} alt={meiaEsquerda.name} />
-                    <span>{meiaEsquerda.name}</span>
-                    {meiaEsquerda.name && <button className="list-reset-button" onClick={() => {setMeiaEsquerda(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='MCE' data_position='meia esquerda' 
+                                name={meiaEsquerda.name} flag={meiaEsquerda.flag} handleClick={() => setMeiaEsquerda(playerNull)} />
 
-                <PlayerLi data-abbr='MEI'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='meia central'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={meiaCentral.flag} alt={meiaCentral.name} />
-                    <span>{meiaCentral.name}</span>
-                    {meiaCentral.name && <button className="list-reset-button" onClick={() => {setMeiaCentral(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='MEI' data_position='meia central' 
+                                name={meiaCentral.name} flag={meiaCentral.flag} handleClick={() => setMeiaCentral(playerNull)} />
 
-                <PlayerLi data-abbr='PTD'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='ponta direita'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={pontaDireita.flag} alt={pontaDireita.name} />
-                    <span>{pontaDireita.name}</span>
-                    {pontaDireita.name && <button className="list-reset-button" onClick={() => {setPontaDireita(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='PTD' data_position='ponta direita' 
+                                name={pontaDireita.name} flag={pontaDireita.flag} handleClick={() => setPontaDireita(playerNull)} />
 
-                <PlayerLi data-abbr='PTE'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='ponta esquerda'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={pontaEsquerda.flag} alt={pontaEsquerda.name} />
-                    <span>{pontaEsquerda.name}</span>
-                    {pontaEsquerda.name && <button className="list-reset-button" onClick={() => {setPontaEsquerda(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='PTE' data_position='ponta esquerda' 
+                                name={pontaEsquerda.name} flag={pontaEsquerda.flag} handleClick={() => setPontaEsquerda(playerNull)} />
 
-                <PlayerLi data-abbr='ATA'>
-                    <button className="btn100"
-                        onClick={(e) => setCurrentPosition(e.target.dataset.position)}
-                        data-position='atacante'
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal">
-                    </button>
-                    <img src={atacante.flag} alt={atacante.name} />
-                    <span>{atacante.name}</span>
-                    {atacante.name && <button className="list-reset-button" onClick={() => {setAtacante(playerNull)}}>X</button>}
-                </PlayerLi>
+                <PlayerListItem data_abbr='ATA' data_position='atacante' 
+                                name={atacante.name} flag={atacante.flag} handleClick={() => setAtacante(playerNull)} />
                 
             </ul>
         </div>

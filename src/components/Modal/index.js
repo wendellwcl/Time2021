@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 
 //Css
 import './modal.css';
@@ -20,6 +20,53 @@ const Modal = () => {
             setMeiaDireita, setMeiaEsquerda, setMeiaCentral,
             setPontaDireita, setPontaEsquerda, setAtacante } = useContext(PlayersContext);
 
+    //Controle do que deverá ser renderizado
+    const [ renderObj, setRenderObj ] = useState();
+
+    //Checar e setar as informações para renderização
+    useEffect(() => {
+        switch(currentPosition){
+            case 'goleiro':
+                setRenderObj({array: goleiros, function: setGoleiro});
+                break;
+            case 'zagueiro direito':
+                setRenderObj({array: zagueiros, function: setZagueiroDireito});
+                break;
+            case 'zagueiro esquerdo':
+                setRenderObj({array: zagueiros, function: setZagueiroEsquerdo});
+                break;
+            case 'lateral direito':
+                setRenderObj({array: laterais, function: setLateralDireito});
+                break;
+            case 'lateral esquerdo':
+                setRenderObj({array: laterais, function: setLateralEsquerdo});
+                break;
+            case 'meia direita':
+                setRenderObj({array: meias, function: setMeiaDireita});
+                break;
+            case 'meia esquerda':
+                setRenderObj({array: meias, function: setMeiaEsquerda});
+                break;
+            case 'meia central':
+                setRenderObj({array: meias, function: setMeiaCentral});
+                break;
+            case 'ponta direita':
+                setRenderObj({array: pontas, function: setPontaDireita});
+                break;
+            case 'ponta esquerda':
+                setRenderObj({array: pontas, function: setPontaEsquerda});
+                break;
+            case 'atacante':
+                setRenderObj({array: atacantes, function: setAtacante});
+                break;
+            default :
+                break;
+        };
+    }, [currentPosition, goleiros, zagueiros, laterais, meias, pontas, atacantes,
+        setGoleiro, setZagueiroDireito, setZagueiroEsquerdo, setLateralDireito, setLateralEsquerdo,
+        setMeiaDireita, setMeiaEsquerda, setMeiaCentral, setPontaDireita, setPontaEsquerda, setAtacante]);
+
+
     return(
         <div className="modal fade" id="modal" tabIndex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-lg">
@@ -32,48 +79,8 @@ const Modal = () => {
                         <div className="container-fluid g-0">
                             <div className="row">
 
-                                {currentPosition === 'goleiro' && goleiros.map(item => (
-                                    <PlayerModal player={item} action={() => setGoleiro(item)} key={item.name} />
-                                ))}
-
-                                {currentPosition === 'zagueiro direito' && zagueiros.map((item) => (
-                                    (<PlayerModal player={item} action={() => setZagueiroDireito(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'zagueiro esquerdo' && zagueiros.map(item => (
-                                    (<PlayerModal player={item} action={() => setZagueiroEsquerdo(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'lateral direito' && laterais.map(item => (
-                                    (<PlayerModal player={item} action={() => setLateralDireito(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'lateral esquerdo' && laterais.map(item => (
-                                    (<PlayerModal player={item} action={() => setLateralEsquerdo(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'meia direita' && meias.map(item => (
-                                    (<PlayerModal player={item} action={() => setMeiaDireita(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'meia esquerda' && meias.map(item => (
-                                    (<PlayerModal player={item} action={() => setMeiaEsquerda(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'meia central' && meias.map(item => (
-                                    (<PlayerModal player={item} action={() => setMeiaCentral(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'ponta direita' && pontas.map(item => (
-                                    (<PlayerModal player={item} action={() => setPontaDireita(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'ponta esquerda' && pontas.map(item => (
-                                    (<PlayerModal player={item} action={() => setPontaEsquerda(item)} key={item.name} />)
-                                ))}
-
-                                {currentPosition === 'atacante' && atacantes.map(item => (
-                                    <PlayerModal player={item} action={() => setAtacante(item)} key={item.name} />
+                                {renderObj && renderObj.array.map(item => (
+                                    <PlayerModal player={item} handleClick={() => renderObj.function(item)} key={item.name}/>
                                 ))}
 
                             </div>

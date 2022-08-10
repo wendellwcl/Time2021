@@ -65,44 +65,52 @@ export const PlayersContext = createContext();
 
 export const PlayersContextProvider = ({ children }) => {
 
+    class Player {
+        constructor(name, img, flag){
+            this.name = name;
+            this.img = img;
+            this.flag = flag;
+        };
+    };
+
     //Jogadores
-    const playerNull = {img: DefaultImg};
-    const alaba = {name: 'Alaba', img: AlabaImg, flag: Austria};
-    const alexanderArnold = {name: 'Alexander-Arnold', img: AlexanderArnoldImg, flag: Inglaterra};
-    const alisson = {name: 'Alisson', img: AlissonImg, flag: Brasil};
-    const benzema = {name: 'Benzema', img: BenzemaImg, flag: Franca};
-    const cancelo = {name: 'Cancelo', img: CanceloImg, flag: Portugal};
-    const courtois = {name: 'Courtois', img: CourtoisImg, flag: Belgica};
-    const cristianoRonaldo = {name: 'Cristiano Ronaldo', img: CristianoRonaldoImg, flag: Portugal};
-    const davies = {name: 'Davies', img: DaviesImg, flag: Canada};
-    const deBruyne = {name: 'de Bruyne', img: DeBruyneImg, flag: Belgica};
-    const ederson = {name: 'Ederson', img: EdersonImg, flag: Brasil};
-    const haaland = {name: 'Haaland', img: HaalandImg, flag: Noruega};
-    const hernandez = {name: 'Hernández', img: HernandezImg, flag: Franca};
-    const kimmich = {name: 'Kimmich', img: KimmichImg, flag: Alemanha};
-    const lewandowski = {name: 'Lewandowski', img: LewandowskiImg, flag: Polonia};
-    const luisDiaz = {name: 'Luis Díaz', img: LuisDiazImg, flag: Colombia};
-    const maignan = {name: 'Maignan', img: MaignanImg, flag: Franca};
-    const marquinhos = {name: 'Marquinhos', img: MarquinhosImg, flag: Brasil};
-    const mbappe = {name: 'Mbappé', img: MbappeImg, flag: Franca};
-    const mendy = {name: 'Mendy', img: MendyImg, flag: Senegal};
-    const messi = {name: 'Messi', img: MessiImg, flag: Argentina};
-    const milinkovicSavic = {name: 'Milinković-Savić', img: MilinkovicSavicImg, flag: Servia};
-    const militao = {name: 'Militão', img: MilitaoImg, flag: Brasil};
-    const modric = {name: 'Modrić', img: ModricImg, flag: Croacia};
-    const neuer = {name: 'Neuer', img: NeuerImg, flag: Alemanha};
-    const paqueta = {name: 'Paquetá', img: PaquetaImg, flag: Brasil};
-    const rafaelLeao = {name: 'Rafael Leão', img: RafaelLeaoImg, flag: Portugal};
-    const reeceJames = {name: 'Reece James', img: ReeceJamesImg, flag: Inglaterra};
-    const robertson = {name: 'Robertson', img: RobertsonImg, flag: Escocia};
-    const rubenDias = {name: 'Rúben Dias', img: RubenDiasImg, flag: Portugal};
-    const rudiger = {name: 'Rüdiger', img: RudigerImg, flag: Alemanha};
-    const salah = {name: 'Salah', img: SalahImg, flag: Egito};
-    const son = {name: 'Son', img: SonImg, flag: CoreiaDoSul};
-    const tchouameni = {name: 'Tchouaméni', img: TchouameniImg, flag: Franca};
-    const vanDijk = {name: 'van Dijk', img: VanDijkImg, flag: Holanda};
-    const vinicius = {name: 'Vinícius Jr.', img: ViniciusImg, flag: Brasil};
-    const vlahovic = {name: 'Vlahović', img: VlahovicImg, flag: Servia};
+    const playerNull = new Player(null, DefaultImg, null);
+    const alaba = new Player ('Alaba', AlabaImg, Austria);
+    const alexanderArnold = new Player ('Alexander-Arnold', AlexanderArnoldImg, Inglaterra);
+    const alisson = new Player ('Alisson', AlissonImg, Brasil);
+    const benzema = new Player ('Benzema', BenzemaImg, Franca);
+    const cancelo = new Player ('Cancelo', CanceloImg, Portugal);
+    const courtois = new Player ('Courtois', CourtoisImg, Belgica);
+    const cristianoRonaldo = new Player ('Cristiano Ronaldo', CristianoRonaldoImg, Portugal);
+    const davies = new Player ('Davies', DaviesImg, Canada);
+    const deBruyne = new Player ('de Bruyne', DeBruyneImg, Belgica);
+    const ederson = new Player ('Ederson', EdersonImg, Brasil);
+    const haaland = new Player ('Haaland', HaalandImg, Noruega);
+    const hernandez = new Player ('Hernández', HernandezImg, Franca);
+    const kimmich = new Player ('Kimmich', KimmichImg, Alemanha);
+    const lewandowski = new Player ('Lewandowski', LewandowskiImg, Polonia);
+    const luisDiaz = new Player ('Luis Díaz', LuisDiazImg, Colombia);
+    const maignan = new Player ('Maignan', MaignanImg, Franca);
+    const marquinhos = new Player ('Marquinhos', MarquinhosImg, Brasil);
+    const mbappe = new Player ('Mbappé', MbappeImg, Franca);
+    const mendy = new Player ('Mendy', MendyImg, Senegal);
+    const messi = new Player ('Messi', MessiImg, Argentina);
+    const milinkovicSavic = new Player ('Milinković-Savić', MilinkovicSavicImg, Servia);
+    const militao = new Player ('Militão', MilitaoImg, Brasil);
+    const modric = new Player ('Modrić', ModricImg, Croacia);
+    const neuer = new Player ('Neuer', NeuerImg, Alemanha);
+    const paqueta = new Player ('Paquetá', PaquetaImg, Brasil);
+    const rafaelLeao = new Player ('Rafael Leão', RafaelLeaoImg, Portugal);
+    const reeceJames = new Player ('Reece James', ReeceJamesImg, Inglaterra);
+    const robertson = new Player ('Robertson', RobertsonImg, Escocia);
+    const rubenDias = new Player ('Rúben Dias', RubenDiasImg, Portugal);
+    const rudiger = new Player ('Rüdiger', RudigerImg, Alemanha);
+    const salah = new Player ('Salah', SalahImg, Egito);
+    const son = new Player ('Son', SonImg, CoreiaDoSul);
+    const tchouameni = new Player ('Tchouaméni', TchouameniImg, Franca);
+    const vanDijk = new Player ('van Dijk', VanDijkImg, Holanda);
+    const vinicius = new Player ('Vinícius Jr.', ViniciusImg, Brasil);
+    const vlahovic = new Player ('Vlahović', VlahovicImg, Servia);
 
     //Jogadores por posições
     const goleiros = [alisson, courtois, ederson, maignan, mendy, neuer];
@@ -115,7 +123,7 @@ export const PlayersContextProvider = ({ children }) => {
     //Controle da Posição Atual selecionada
     const [currentPosition, setCurrentPosition] = useState(null);
 
-    //Posições
+    //Posições individuais
     const [goleiro, setGoleiro] = useState(playerNull);
     const [zagueiroDireito, setZagueiroDireito] = useState(playerNull);
     const [zagueiroEsquerdo, setZagueiroEsquerdo] = useState(playerNull);
@@ -128,10 +136,17 @@ export const PlayersContextProvider = ({ children }) => {
     const [pontaEsquerda, setPontaEsquerda] = useState(playerNull);
     const [atacante, setAtacante] = useState(playerNull);
 
+    //Todas posições
+    const selecionados = [ goleiro, 
+                        zagueiroDireito, zagueiroEsquerdo, lateralDireito, lateralEsquerdo, 
+                        meiaDireita, meiaEsquerda, meiaCentral,
+                        pontaDireita, pontaEsquerda, atacante ];
+
+
     return(
         <PlayersContext.Provider value={{
             currentPosition, setCurrentPosition, 
-            playerNull, goleiros, zagueiros, laterais, meias, pontas, atacantes,
+            playerNull, goleiros, zagueiros, laterais, meias, pontas, atacantes, selecionados,
             goleiro, setGoleiro,
             zagueiroDireito, setZagueiroDireito,
             zagueiroEsquerdo, setZagueiroEsquerdo,

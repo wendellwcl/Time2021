@@ -7,41 +7,28 @@ import { Hexagon } from "../styled-components";
 import { PlayersContext } from "../../context/PlayersContext";
 
 
-const PlayerModal = ({ player, action }) => {
+const PlayerModal = ({ player, handleClick }) => {
 
     //Recuperar dados do context
-    const { zagueiroDireito, zagueiroEsquerdo,
-        lateralDireito, lateralEsquerdo,
-        meiaDireita, meiaEsquerda, meiaCentral,
-        pontaDireita, pontaEsquerda } = useContext(PlayersContext)
+    const { selecionados } = useContext(PlayersContext)
         
     //Disable = true quando um jogador ja foi selecionado (adiciona um className para feedback visual, impossibilita que um jogador seja selecionado duas vezes)
-    const [disable, setDisable] = useState(false)
+    const [disable, setDisable] = useState(false);
 
     //Checar jogadores já selecionados, caso sim, setDisable = true
     useEffect(()=>{
-        function checkDuplicate(){
-            if( player.name === zagueiroDireito.name ||
-                player.name === zagueiroEsquerdo.name ||
-                player.name === lateralDireito.name ||
-                player.name === lateralEsquerdo.name ||
-                player.name === meiaDireita.name ||
-                player.name === meiaEsquerda.name ||
-                player.name === meiaCentral.name ||
-                player.name === pontaDireita.name ||
-                player.name === pontaEsquerda.name
-            ){
-                setDisable(true);
-            };
+        if(selecionados.find(item => item.name === player.name)){
+            setDisable(true);
+        } else {
+            setDisable(false);
         };
-        checkDuplicate();
-    });
+    }, [selecionados, player.name]);
 
     return(
         <div className={`col-4 col-lg-2 d-flex flex-column align-items-center playerModal ${disable && "disable"}`}>
             <Hexagon size={90}>
                 {!disable && 
-                    <button onClick={action} 
+                    <button onClick={handleClick} 
                         data-bs-dismiss="modal" 
                         aria-label={`selecionar ${player.name}`}>
                     </button>
