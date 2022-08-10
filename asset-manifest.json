@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TimeDaTemporada-2022/static/css/main.5854b425.css",
-    "main.js": "/TimeDaTemporada-2022/static/js/main.54f6fe69.js",
+    "main.css": "/TimeDaTemporada-2022/static/css/main.a055da8d.css",
+    "main.js": "/TimeDaTemporada-2022/static/js/main.c832a84f.js",
     "static/media/SoccerPitch.png": "/TimeDaTemporada-2022/static/media/SoccerPitch.fba541d9c2cbacfc2a1d.png",
     "static/media/Salah.png": "/TimeDaTemporada-2022/static/media/Salah.b777f1ce872b1af75dcf.png",
     "static/media/AlexanderArnold.png": "/TimeDaTemporada-2022/static/media/AlexanderArnold.7f30bd2acc5e0fca4074.png",
@@ -40,11 +40,11 @@
     "static/media/Rudiger.png": "/TimeDaTemporada-2022/static/media/Rudiger.e1f4626fc6bb5c33ec1d.png",
     "static/media/Mendy.png": "/TimeDaTemporada-2022/static/media/Mendy.67fc9acddd968a3c0ccf.png",
     "index.html": "/TimeDaTemporada-2022/index.html",
-    "main.5854b425.css.map": "/TimeDaTemporada-2022/static/css/main.5854b425.css.map",
-    "main.54f6fe69.js.map": "/TimeDaTemporada-2022/static/js/main.54f6fe69.js.map"
+    "main.a055da8d.css.map": "/TimeDaTemporada-2022/static/css/main.a055da8d.css.map",
+    "main.c832a84f.js.map": "/TimeDaTemporada-2022/static/js/main.c832a84f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5854b425.css",
-    "static/js/main.54f6fe69.js"
+    "static/css/main.a055da8d.css",
+    "static/js/main.c832a84f.js"
   ]
 }
