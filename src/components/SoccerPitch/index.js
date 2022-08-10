@@ -1,18 +1,18 @@
-import { useContext } from "react"
+import { useContext } from "react";
 
 //Context
-import { PlayersContext } from "../../context/PlayersContext"
+import { PlayersContext } from "../../context/PlayersContext";
 
 //Css
-import "./soccerPitch.css"
+import "./soccerPitch.css";
 
 //Components
-import Player from "../Player"
+import Player from "../Player";
 
 
 const SoccerPitch = () => {
 
-    //recuperando dados do context
+    //Recuperando dados do context
     const { playerNull, 
             goleiro, setGoleiro,
             zagueiroDireito, setZagueiroDireito, 
@@ -42,8 +42,8 @@ const SoccerPitch = () => {
                 <Player player={atacante} reset={() => setAtacante(playerNull)} position="atacante"/>
             </div>
         </div>
-    )
+    );
 
-}
+};
 
-export default SoccerPitch
+export default SoccerPitch;

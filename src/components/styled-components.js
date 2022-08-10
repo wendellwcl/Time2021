@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 //Hexagono
 export const Hexagon = styled.div`

@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 //Assets
 import DefaultImg from "../assets/Players/Default.png";
-//--
+//--Jogadores
 import AlabaImg from '../assets/Players/Alaba.png';
 import AlexanderArnoldImg from '../assets/Players/AlexanderArnold.png';
 import AlissonImg from '../assets/Players/Alisson.png';
@@ -39,7 +39,7 @@ import TchouameniImg from '../assets/Players/Tchouameni.png';
 import VanDijkImg from '../assets/Players/VanDijk.png';
 import ViniciusImg from '../assets/Players/Vinicius.png';
 import VlahovicImg from '../assets/Players/Vlahovic.png';
-//--
+//--Bandeiras
 import Alemanha from '../assets/Flags/Alemanha.png';
 import Argentina from '../assets/Flags/Argentina.png';
 import Austria from '../assets/Flags/Austria.png';
@@ -112,7 +112,7 @@ export const PlayersContextProvider = ({ children }) => {
     const pontas = [luisDiaz, messi, rafaelLeao, salah, son, vinicius];
     const atacantes = [benzema, cristianoRonaldo, haaland, lewandowski, mbappe, vlahovic];
 
-    //controle da Posição Atual selecionada
+    //Controle da Posição Atual selecionada
     const [currentPosition, setCurrentPosition] = useState(null);
 
     //Posições
@@ -146,6 +146,6 @@ export const PlayersContextProvider = ({ children }) => {
         }}>
             {children}
         </PlayersContext.Provider>
-    )
+    );
     
-}
+};

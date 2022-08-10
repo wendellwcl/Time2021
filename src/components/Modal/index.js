@@ -1,10 +1,10 @@
-import { useContext } from "react"
+import { useContext } from "react";
 
 //Css
-import './modal.css'
+import './modal.css';
 
 //Context
-import { PlayersContext } from "../../context/PlayersContext"
+import { PlayersContext } from "../../context/PlayersContext";
 
 //Components
 import PlayerModal from "../PlayerModal";
@@ -12,7 +12,7 @@ import PlayerModal from "../PlayerModal";
 
 const Modal = () => {
 
-    //recuperando dados do context
+    //Recuperar dados do context
     const { currentPosition, 
             goleiros, zagueiros, laterais, meias, pontas, atacantes,
             setGoleiro, setZagueiroDireito, setZagueiroEsquerdo, 
@@ -82,8 +82,8 @@ const Modal = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 
-}
+};
 
-export default Modal
+export default Modal;

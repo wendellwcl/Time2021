@@ -1,7 +1,7 @@
 //Components
-import PlayersList from "../PlayersList"
-import SoccerPitch from "../SoccerPitch"
-import Modal from "../Modal"
+import PlayersList from "../PlayersList";
+import SoccerPitch from "../SoccerPitch";
+import Modal from "../Modal";
 
 
 const Main = () => {
@@ -14,8 +14,8 @@ const Main = () => {
                 <Modal/>
             </div>
         </main>
-    )
+    );
 
-}
+};
 
-export default Main
+export default Main;

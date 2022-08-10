@@ -1,24 +1,24 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react";
 
 //Components
-import { Hexagon } from "../styled-components"
+import { Hexagon } from "../styled-components";
 
 //Context
-import { PlayersContext } from "../../context/PlayersContext"
+import { PlayersContext } from "../../context/PlayersContext";
 
 
 const PlayerModal = ({ player, action }) => {
 
-    //recuperando dados do context
+    //Recuperar dados do context
     const { zagueiroDireito, zagueiroEsquerdo,
         lateralDireito, lateralEsquerdo,
         meiaDireita, meiaEsquerda, meiaCentral,
         pontaDireita, pontaEsquerda } = useContext(PlayersContext)
         
-    //disable = true quando um jogador ja foi selecionado (adiciona um className para feedback visual, impossibilita que um jogador seja selecionado duas vezes)
+    //Disable = true quando um jogador ja foi selecionado (adiciona um className para feedback visual, impossibilita que um jogador seja selecionado duas vezes)
     const [disable, setDisable] = useState(false)
 
-    //checa jogadores ja selecionados, caso sim, setDisable = true
+    //Checar jogadores já selecionados, caso sim, setDisable = true
     useEffect(()=>{
         function checkDuplicate(){
             if( player.name === zagueiroDireito.name ||
@@ -31,11 +31,11 @@ const PlayerModal = ({ player, action }) => {
                 player.name === pontaDireita.name ||
                 player.name === pontaEsquerda.name
             ){
-                setDisable(true)
-            }
-        }
-        checkDuplicate()
-    })
+                setDisable(true);
+            };
+        };
+        checkDuplicate();
+    });
 
     return(
         <div className={`col-4 col-lg-2 d-flex flex-column align-items-center playerModal ${disable && "disable"}`}>
@@ -52,8 +52,8 @@ const PlayerModal = ({ player, action }) => {
             </Hexagon>
             <nobr className="name mt-0">{player.name}</nobr>
         </div>
-    )
+    );
 
-}
+};
 
-export default PlayerModal
+export default PlayerModal;

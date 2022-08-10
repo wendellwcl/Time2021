@@ -11,8 +11,8 @@ const Header = () => {
                 Escale seu time com os melhores jogadores de 2021/22.
             </p>
         </header>
-    )
+    );
 
-}
+};
 
-export default Header
+export default Header;

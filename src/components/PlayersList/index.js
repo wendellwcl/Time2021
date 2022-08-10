@@ -1,15 +1,15 @@
-import { useContext } from "react"
+import { useContext } from "react";
 
 //Component
-import { PlayerLi } from "../styled-components"
+import { PlayerLi } from "../styled-components";
 
 //Context
-import { PlayersContext }from '../../context/PlayersContext'
+import { PlayersContext }from '../../context/PlayersContext';
 
 
 const PlayersList = () => {
 
-    //recuperando dados do context
+    //Recuperar dados do context
     const { setCurrentPosition , playerNull,
             goleiro, setGoleiro, 
             zagueiroDireito, setZagueiroDireito, 
@@ -21,7 +21,7 @@ const PlayersList = () => {
             meiaCentral, setMeiaCentral, 
             pontaDireita, setPontaDireita, 
             pontaEsquerda, setPontaEsquerda, 
-            atacante, setAtacante } = useContext(PlayersContext)
+            atacante, setAtacante } = useContext(PlayersContext);
 
     return(
         <div className="d-none d-lg-flex flex-column justify-content-center col-6">
@@ -161,8 +161,8 @@ const PlayersList = () => {
                 
             </ul>
         </div>
-    )
+    );
 
-}
+};
 
-export default PlayersList
+export default PlayersList;

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import "./player.css";
 
 //Components
-import { Hexagon } from "../styled-components"
+import { Hexagon } from "../styled-components";
 
 //Context
 import { PlayersContext } from "../../context/PlayersContext";
@@ -12,10 +12,10 @@ import { PlayersContext } from "../../context/PlayersContext";
 
 const Player = ({ player, reset, position }) => {
 
-    //tratamento da informação de posição
-    const positionData = position.replace("_", " ")
+    //Tratamento da informação de posição
+    const positionData = position.replace("_", " ");
 
-    //recuperando dados do context
+    //Recuperando dados do context
     const { setCurrentPosition } = useContext(PlayersContext);
 
     return(
@@ -34,8 +34,8 @@ const Player = ({ player, reset, position }) => {
             {player.name && <nobr className="name">{player.name}</nobr>}
             {player.name && <button className="reset-button" onClick={reset}>X</button>}
         </div>
-    )
+    );
 
-}
+};
 
-export default Player
+export default Player;
